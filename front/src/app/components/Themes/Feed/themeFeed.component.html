@@ -7,7 +7,16 @@
             [content]="theme.description"
             [buttonText]="!theme.subscribed ? 'Subscribe' : 'Unsubscribe'"
             (buttonClick)="!theme.subscribed ? subscribeToTheme(theme.id!) : unsubscribeToTheme(theme.id!)"
-            [ngStyle]="{'min-width': '500px', 'width': isLargeScreen ? 'calc(50% - 24px)' : '100%', 'margin-bottom': '24px', 'margin-right': '10px'}" style="cursor: pointer;">
+            [buttonStyle]="{
+                'background-color': !theme.subscribed ? '#7763C5' : '#8f8f8f',
+                'color': 'white'
+            }"
+            [ngStyle]="{
+                'min-width': '500px',
+                'width': isLargeScreen ? 'calc(50% - 24px)' : '100%',
+                'margin-bottom': '24px'
+            }"
+            style="cursor: pointer;">
         </app-base-card>
     </div>
 </section>

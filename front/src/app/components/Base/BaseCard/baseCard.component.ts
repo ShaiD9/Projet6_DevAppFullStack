@@ -14,6 +14,7 @@ export class BaseCardComponent {
   @Input() isLargeScreen: boolean = false;
   @Input() description: string = '';
   @Input() buttonText: string = '';
+  @Input() buttonStyle!: { [key: string]: string };
   @Input() ellipsis: number = 3;
 
   @Output() buttonClick = new EventEmitter<void>();
