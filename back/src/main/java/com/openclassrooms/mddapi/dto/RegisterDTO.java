@@ -16,7 +16,7 @@ public class RegisterDTO {
     private String username;
 
     @NotBlank(message = "Password is mandatory")
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$",
+    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*!@#$%^&+=]).{8,}$",
             message = "Password must contain at least one digit, one lowercase letter, one uppercase letter, one special character, and be at least 8 characters long")
     private String password;
 }

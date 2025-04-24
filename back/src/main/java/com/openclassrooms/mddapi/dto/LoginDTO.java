@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 
 @Data
 public class LoginDTO {
-    @NotBlank(message = "Email or password is mandatory")
+    @NotBlank(message = "Email or username is mandatory")
     private String emailOrUsername;
 
     @NotBlank(message = "Password is mandatory")
